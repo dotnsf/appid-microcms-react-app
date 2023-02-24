@@ -27,6 +27,11 @@
 
 ## IBM AppID
 
+### Swagger API Doc
+
+https://us-south.appid.cloud.ibm.com/swagger-ui/#/
+
+
 ### Server Side
 
 https://www.npmjs.com/package/ibmcloud-appid

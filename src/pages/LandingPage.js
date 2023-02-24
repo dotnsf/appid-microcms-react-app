@@ -19,7 +19,15 @@ const LandingPage = () => {
 
   const loginAction = async () => {
     try{
-      const tokens = await appID.signin();
+      //const tokens = await appID.signin();
+      let tokens;
+      try{
+        tokens = await appID.silentSignin();
+      }catch( e ){
+        if( !tokens ){
+          tokens = await appID.signin();
+        }
+      }
       setErrState( false );
       setUserName( tokens.idTokenPayload.name );
 
